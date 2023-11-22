@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hunger Games Simulator</title>
+<title>Los juegos de Twitter</title>
 <link rel="shortcut icon" href="icon.png">
 <link type="text/css" rel="stylesheet" href="styles.css">
 <script type="text/javascript" src="items.js"></script>
@@ -11,58 +11,54 @@
 </div>
 <div id="start">
 	<div id="hungergames" class="header">
-	<h1 class="title">The Hunger Games</h1>
+	<h1 class="title">Los juegos de Twitter</h1>
 	<button id="button" type="button" class="button"><span>Confirm</span></button>
 </div>
 	<div style="height: 10%;"></div>
 	<div style="width: 60%; float: left;">
-		<h2 id="heading">May the odds be ever in your favor!</h2>
-		<label>How many participants?
+		<h2 id="heading">Muchisima suerte a todos!</h2>
+		<label>Cuantos participantes?
 			<input id="wow" type="number"/>
 		</label>
 		<br><br>
-		<label>Two champions allowed?
-			<input id="double" type="checkbox"/>
-		</label>
-		<br>
-		<br>
+		
 	</div>
 </div>
 <div id="names">
 	<div id="reaping" class="header">
-	<h1 class="title">The Reaping</h1>
-	<button id="confirmNames" type="button" class="button"><span>Confirm Names</span></button>	
+	<h1 class="title">Reclutamiento</h1>
+	<button id="confirmNames" type="button" class="button"><span>Confirmar normes</span></button>	
 	</div>
 </div>
 
 <div id="stats">
-<div class="header"><h1 class="title">The Tributes</h1><button id="proceedOne" type="button" class="button"><span>Proceed</span></button></div>
+<div class="header"><h1 class="title">Los tributos</h1><button id="proceedOne" type="button" class="button"><span>Proceed</span></button></div>
 </div>
 
 <div id="day">
-<div class="header"><h1 id="dayNum" class="title">Day </h1><button id="proceedTwo" type="button" class="button"><span>Proceed</span></button></div>
+<div class="header"><h1 id="dayNum" class="title">Día </h1><button id="proceedTwo" type="button" class="button"><span>Proceed</span></button></div>
 </div>
 
 <div id="corn">
-<div class="header"><h1 class="title">The Bloodbath</h1><button id = "proceedThree" type="button" class="button"><span>Proceed</span></button></div>
+<div class="header"><h1 class="title">El baño de sangre/h1><button id = "proceedThree" type="button" class="button"><span>Proceed</span></button></div>
 </div>
 
 <div id="deaths">
-<div class="header"><h1 class="title">Honor the Fallen</h1><button id="proceedFour" type="button" class="button"><span>Proceed</span></button></div>
-<h2 id="cannon"> cannon shots can be heard in the distance</h2>
-<h2>The following tributes have fallen:</h2>
+<div class="header"><h1 class="title">Honrad a los caidos</h1><button id="proceedFour" type="button" class="button"><span>Proceed</span></button></div>
+<h2 id="cannon"> tiro(s) de cañón se escuchan del cielo</h2>
+<h2>Fallecieron los siguientes tributos:</h2>
 </div>
 
 <div id="winner">
-<div class="header"><h1 class="title">The Champion</h1><button id="proceedFive" type="button" class="button"><span>Proceed</span></button></div>
+<div class="header"><h1 class="title">El campeón</h1><button id="proceedFive" type="button" class="button"><span>Proceed</span></button></div>
 <h2 id="declare"></h2>
 <h2 id="champKills"></h2>
 </div>
 
 <div id="summary">
-<div class="header"><h1>A Recap of The Hunger Games</h1></div>
-<button id="restart" type="button" class="buttonTwo"><span>New Hunger Games</span></button>
-<button id="same" type="button" class="buttonTwo"><span>Quarter Quell! Same Tributes Again!</span></button>
+<div class="header"><h1>Resumen</h1></div>
+<!--<button id="restart" type="button" class="buttonTwo"><span>New Hunger Games</span></button>
+<button id="same" type="button" class="buttonTwo"><span>Quarter Quell! Same Tributes Again!</span></button>-->
 </div>
 
 <script>
@@ -319,7 +315,7 @@
 					if (f === 'a' || f === 'e' || f === 'i' || f === 'o'){
 						article += "n";
 					}
-					fates.push(allNames[r] + " stumbles upon " + article + " " + weapons[w] + ".");
+					fates.push(allNames[r] + " tropieza con " + article + " " + weapons[w] + ".");
 					playerItems[r].push(weapons[w]);
 					if (weapons[w] === "melee"){
 						w = rand(mnum);
@@ -327,7 +323,7 @@
 						if (f === 'a' || f === 'e' || f === 'i' || f === 'o'){
 							article += "n";
 						}
-						fates[fates.length-1] = allNames[r] + " stumbles upon " + article + " " + melee[w] + ".";
+						fates[fates.length-1] = allNames[r] + " tropieza con " + article + " " + melee[w] + ".";
 						playerItems[r][playerItems[r].length-1] = melee[w];
 					}
 					break;
@@ -339,19 +335,19 @@
 						var f = itemsToFind[q].charAt(0);
 						var article = "a";
 						if (itemsToFind[q] === "Lapras"){
-							fates.push("A wild Lapras has appeared. " + allNames[r] + " has caught it!");
+							fates.push("Un Lapras salvaje apareció. " + allNames[r] + " lo cogió!");
 						}
 						else if (itemsToFind[q] === "Stalin mustache"){
-							fates.push(allNames[r] + " has grown a Stalin mustache.");
+							fates.push("A" allNames[r] + " le ha crecido un bigote estilo Stalin.");
 						}
 						else if (itemsToFind[q] === "one spaghetti"){
-							fates.push(allNames[r] + " discovers a singular spaghetti lying on the ground.");	
+							fates.push(allNames[r] + " descubrió un solo espagueti en el suelo.");	
 						}
 						else {
 							if (f === 'a' || f === 'e' || f === 'i' || f === 'o'){
 								article += "n";
 							}
-							fates.push(allNames[r] + " discovers " + article + " " + itemsToFind[q] + " lying on the ground.");
+							fates.push(allNames[r] + " encentra a " + article + " " + itemsToFind[q] + " tirado en el suelo.");
 						}
 						break;
 					}
@@ -363,14 +359,14 @@
 							article += "n";
 						}
 						if (sponsor[q] === "one spaghetti"){
-							fates.push(allNames[r] + " receives a singular spaghetti from a sponsor");	
+							fates.push(allNames[r] + " recivió un solo espagueti de un patrocinador");	
 						}
 						else {
-							fates.push(allNames[r] + " receives " + article + " " + sponsor[q] + " from a sponsor");
+							fates.push(allNames[r] + " recibió " + article + " " + sponsor[q] + " de un patrocinador");
 						}
 						playerItems[r].push(sponsor[q]);
 						if (sponsor[q] === "empty box"){
-							fates[fates.length-1] += ", because apparently the sponsor is a dick.";
+							fates[fates.length-1] += ", porque aparentemente el patrocinador es gilipollas.";
 							playerItems[r].pop();
 						}
 						else {
@@ -398,7 +394,7 @@
 							var q = liveChampion(r);
 							var fate = rand(2);
 							if (a === "melee" && fate === 0){
-								fates.push(allNames[r] + " " + b + " " + allNames[q] + " with a " + aMelee + ".");
+								fates.push(allNames[r] + " " + b + " " + allNames[q] + " con un " + aMelee + ".");
 								xKillsY(r,q);
 								done[q] = true;
 								summary.push(fates[fates.length-1]);
@@ -407,11 +403,11 @@
 								injureTwo(r,q);
 								if (!deathBools[q]){
 									done[q] = true;
-									fates.push(allNames[r] + " " + b + " " + allNames[q] + " with a " + aMelee + ".");
+									fates.push(allNames[r] + " " + b + " " + allNames[q] + " con un " + aMelee + ".");
 									summary.push(fates[fates.length-1]);
 								}
 								else {
-									fates.push(allNames[r] + " almost whacks " + allNames[q] + " to death with a " + aMelee + ".");
+									fates.push(allNames[r] + " casi golpea a muerte a " + allNames[q] + " con un " + aMelee + ".");
 								}
 							}
 							else if (b === "random mine" || fate === 0){
@@ -420,7 +416,7 @@
 									if (c === 0){
 										var s = liveChampion(r);
 										if (s != q){
-											fates.push(allNames[r] + " sets off a landmine that kills " + allNames[q] + " and " + allNames[s] + ".");
+											fates.push(allNames[r] + " activa una mina que mata a " + allNames[q] + " y " + allNames[s] + ".");
 											deathBools[q] = false;
 											deathBools[s] = false;
 											done[q] = true;
@@ -428,28 +424,28 @@
 											kills[r] += 2;
 										}
 										else {
-											fates.push(allNames[r] + " sets off a landmine that kills " + allNames[q] + ".");
+											fates.push(allNames[r] + " activa una mina que mata a " + allNames[q] + ".");
 											xKillsY(r,q);
 											done[q] = true;
 										}
 									}
 									else {
-										fates.push(allNames[r] + " accidentally steps on " + proPos[r] + " own landmine.");
+										fates.push(allNames[r] + " accidentalmente pisa en la mina de " + proPos[r]);
 										xDies(r);
 									}
 								}
 								else if (a === "frisbee"){
-									fates.push(allNames[r] + " decapitates " + allNames[q] + " with a frisbee.");
+									fates.push(allNames[r] + " decapita a " + allNames[q] + " con un frisbee.");
 									xKillsY(r,q);
 									done[q] = true;
 								}
 								else if (a === "octobrush"){
-									fates.push(allNames[r] + " splats " + allNames[q] + " with an octobrush.");
+									fates.push(allNames[r] + " salpica a " + allNames[q] + " con un octopincel.");
 									xKillsY(r,q);
 									done[q] = true;
 								}
 								else if (a === "paintball"){
-									fates.push(allNames[r] + " " + b + " " + allNames[q] + " dies of needing paintballs.");
+									fates.push(allNames[r] + " " + b + " " + allNames[q] + " murió al necesitar bolas de pintura.");
 									xKillsY(r,q);
 									done[q] = true;
 								}
@@ -465,23 +461,23 @@
 								if (a === "frisbee"){
 									injureTwo(r,q);
 									if (!deathBools[q]){
-										fates.push(allNames[r] + " fatally breaks " + allNames[q] + "\'s nose with a frisbee.");
+										fates.push(allNames[r] + " rompe la nariz de " + allNames[q] + " con un frisbee.");
 										done[q] = true;
 										summary.push(fates[fates.length-1]);
 									}
 									else {
-										fates.push(allNames[r] + " breaks " + allNames[q] + "\'s nose with a frisbee.");
+										fates.push(allNames[r] + " rompe la nariz de " + allNames[q] + " con un frisbee.");
 									}
 								}
 								else if (a === "tank"){
 									injureTwo(r,q);
 									if (!deathBools[q]){
-										fates.push(allNames[r] + " runs over " + allNames[q] + " with " + proPos[r] + " tank, causing the death of " + allNames[q] + ".");
+										fates.push(allNames[r] + " atropella a " + allNames[q] + " con el tanque de " + proPos[r] + " , causando la muerte de " + allNames[q] + ".");
 										done[q] = true;
 										summary.push(fates[fates.length-1]);
 									}
 									else {
-										fates.push(allNames[r] + " runs over " + allNames[q] + " with " + proPos[r] + " tank, but " + allNames[q] + " survives due to " + proPos[q] + " belief in the Flying Spaghetti Monster.");
+										fates.push(allNames[r] + " atropella a " + allNames[q] + " con el tanque de " + proPos[r] + " pero " + allNames[q] + " sobrevive por la creencia de " + proPos[q] + " del monstruo de Espagueti Volador.");
 									}
 								}
 								else {
@@ -497,8 +493,8 @@
 								}
 							}
 						}
-						else if (a === "House of the Seven Gables"){
-							fates.push("The roof falls on " + allNames[r] + ".");
+						else if (a === "Casa de los siete aguilones"){
+							fates.push("El techo cae sobre " + allNames[r] + ".");
 							xDies(r);
 							summary.push(fates[fates.length-1]);
 						}
@@ -511,12 +507,12 @@
 						else if (a === "indescribable object"){
 							var temp = rand(3);
 							if (temp === 0){
-								fates.push(allNames[r] + "\'s indescribable object explodes in a shower of glorious communism, killing " + pro[r] + ".");
+								fates.push("El objeto indescriptible de " + allNames[r] + " explota en una ducha de glorioso comunismo, matando a " + pro[r] + ".");
 								xDies(r);
 								summary.push(fates[fates.length-1]);
 							}
 							else if (temp === 1){
-								fates.push(allNames[r] + " throws " + proPos[r] + " indescribable object, which quickly disintegrates " + allNames[q] + ".");
+								fates.push(allNames[r] + " lanza el objeto indescriptible de " + proPos[r] + ", que desintegra rapidamente a " + allNames[q] + ".");
 								xKillsY(r,q);
 								done[q] = true;
 								summary.push(fates[fates.length-1]);
