@@ -518,23 +518,23 @@
 								summary.push(fates[fates.length-1]);
 							}
 							else {
-								fates.push(allNames[r] + "\'s indescribable object sits there uselessly, so " + allNames[r] + " pollutes the ocean with it.");
+								fates.push("El objeto indescriptible de " + allNames[r] + " está cogiendo polvo, así que " + allNames[r] + " contamina el mar con él.");
 							}
 						}
 						else if (a === "chocolate-covered cotton"){
 							injureOne(r);
 							if (!deathBools[r]){
-								fates.push(allNames[r] + " gets terminal constipation from chocolate-covered cotton and dies.");
+								fates.push(allNames[r] + " sufre estreñimiento terminal debido al algodón cubierto de chocolate y muere.");
 								xDies(r);
 								summary.push(fates[fates.length-1]);
 							}
 							else {
-								fates.push(allNames[r] + " gets indigestion from eating too much chocolate-covered cotton.");
+								fates.push(allNames[r] + " coge una indigestion de comer tanto algodón cubierto de chocolate");
 							}
 						}
 						else if (a === "Agrawal star"){
 							var q = liveChampion(r);
-							fates.push(allNames[r] + "\'s Agrawal star causes " + allNames[q] + " to die of jealousy.");
+							fates.push("La estrella de Agrawal de " + allNames[r] + " causa a " + allNames[q] + " a morir de manera envidiosa.");
 							done[q] = true;
 							summary.push(fates[fates.length-1]);
 							xKillsY(r,q);
@@ -543,24 +543,24 @@
 							var q = liveChampion(r);
 							injureTwo(r,q);
 							if (!deathBools[q]){
-								fates.push(allNames[q] + " contracts hypothermia after being shot by " + allNames[r] + "\'s freeze ray and freezes to death.");
+								fates.push(allNames[q] + " contrae hipotermia despues de recibir el rayo congelante de " + allNames[r] + " y se muere de frío.");
 								done[q] = true;
 								summary.push(fates[fates.length-1]);
 							}
 							else {
-								fates.push(allNames[r] + " freezes " + allNames[q] + " with a freeze ray.");
+								fates.push(allNames[r] + " congela a " + allNames[q] + " con un rayo congelante.");
 							}
 						}
 						else if (a === "Lapras"){
 							var q = liveChampion(r);
-							fates.push(allNames[r] + " used Lapras against " + allNames[q] + ". " + allNames[q] + " fainted and subsequently died. It was super effective.");
+							fates.push(allNames[r] + " uso un Lapras contra " + allNames[q] + ". " + allNames[q] + " se desmayó y por ende murió. Fue superefectivo.");
 							xKillsY(r,q);
 							summary.push(fates[fates.length-1]);
 							done[q] = true;
 						}
 						else if (a === "Stalin mustache"){
 							var q = liveChampion(r);
-							fates.push(allNames[r] + " sends " + allNames[q] + " to the gulag.");
+							fates.push(allNames[r] + " manda a " + allNames[q] + " al gulag.");
 							xKillsY(r,q);
 							summary.push(fates[fates.length-1]);
 							done[q] = true;
@@ -576,16 +576,16 @@
 							else if (y === "random chicken"){
 								var x = rand(2);
 								if (x === 0){
-									fates.push(allNames[r] + " eats Ohio Fried Chicken.");
+									fates.push(allNames[r] + " se come un buen Ohio Fried Chicken.");
 								}
 								else if (x === 1){
 									injureOne(r);
 									if (!deathBools[r]){
-										fates.push(allNames[r] + " dies of overeating Ohio Fried Chicken.");
+										fates.push(allNames[r] + " muere de comer demasiado Ohio Fried Chicken.");
 										summary.push(fates[fates.length-1]);
 									}
 									else {
-										fates.push(allNames[r] + " goes into a food coma from too much Ohio Fried Chicken.");
+										fates.push(allNames[r] + " cae en un coma de comida por tanto Ohio Fried Chicken.");
 									}
 								}
 							}
@@ -593,17 +593,17 @@
 								var aa = rand(2);
 								if (aa === 0){
 									pleaseHeal(r);
-									fates.push(allNames[r] + " gains one health point after using a used Band-Aid.");
+									fates.push(allNames[r] + " gana un punto de vida al ponerse una venda.");
 								}
 								else {
-									fates.push(allNames[r] + " gets tetanus from a used Band-Aid and dies.");
+									fates.push(allNames[r] + " es contagiado de tetanus al usar una venda usada y muere.");
 									xDies(r);
 									summary.push(fates[fates.length-1]);
 								}
 							}
 							else if (y === "safe dating"){
 								var q = liveChampion(r);
-								fates.push(allNames[r] + " and " + allNames[q] + " practice safe dating.");
+								fates.push(allNames[r] + " and " + allNames[q] + " tienen citas seguras.");
 								health[r]++;
 								health[q]++;
 							}
